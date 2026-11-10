@@ -1,0 +1,217 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1e293b;
+  background: #f3f5fb;
+  --bs-primary: #4338ca;
+  --bs-primary-rgb: 67, 56, 202;
+  --bs-body-color: #1e293b;
+  --bs-body-bg: #f3f5fb;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #e7e5ff 0, transparent 38rem),
+    #f3f5fb;
+}
+
+.app-shell {
+  max-width: 1200px;
+}
+
+.app-brand {
+  color: #312e81;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.app-shell > section > header {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgb(30 41 59 / 5%);
+}
+
+.auth-card {
+  margin-top: clamp(1rem, 5vh, 4rem);
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-control {
+  background: #fff;
+  border-color: #cbd5e1;
+  border-radius: 0.65rem;
+  padding: 0.65rem 0.85rem;
+}
+
+.form-control:focus {
+  background: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 0.2rem rgb(99 102 241 / 15%);
+}
+
+.btn {
+  border-radius: 0.65rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  --bs-btn-bg: #4338ca;
+  --bs-btn-border-color: #4338ca;
+  --bs-btn-hover-bg: #3730a3;
+  --bs-btn-hover-border-color: #3730a3;
+  --bs-btn-active-bg: #312e81;
+  --bs-btn-active-border-color: #312e81;
+  --bs-btn-disabled-bg: #4338ca;
+  --bs-btn-disabled-border-color: #4338ca;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #4338ca;
+  --bs-btn-border-color: #4338ca;
+  --bs-btn-hover-bg: #4338ca;
+  --bs-btn-hover-border-color: #4338ca;
+  --bs-btn-active-bg: #3730a3;
+  --bs-btn-active-border-color: #3730a3;
+  --bs-btn-disabled-color: #4338ca;
+  --bs-btn-disabled-border-color: #4338ca;
+}
+
+.btn-link {
+  --bs-btn-color: #4338ca;
+  --bs-btn-hover-color: #312e81;
+}
+
+.conversation-sidebar {
+  min-width: 0;
+}
+
+.conversation-sidebar .list-group {
+  gap: 0.5rem;
+}
+
+.conversation-sidebar .list-group-item {
+  padding: 0.9rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.conversation-sidebar .list-group-item-action:hover {
+  background: #eef2ff;
+}
+
+.conversation-sidebar .list-group-item.active {
+  background: #4338ca;
+  border-color: #4338ca;
+  color: #fff;
+}
+
+.conversation-sidebar .list-group-item.active small {
+  color: #fff !important;
+}
+
+.chat-panel {
+  overflow: hidden;
+}
+
+.chat-panel .card-header {
+  padding: 1rem;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.chat-panel .card-header h2 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.chat-history {
+  height: clamp(280px, 50vh, 650px);
+  padding: 1.25rem;
+  background: #f8fafc;
+}
+
+.message-bubble {
+  max-width: 85%;
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.message-mine {
+  color: #fff;
+  background: #4338ca;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.message-theirs {
+  color: #1e293b;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.message-bubble strong {
+  margin-bottom: 0.25rem;
+}
+
+.message-bubble time {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.chat-panel .card-footer {
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.chat-panel textarea {
+  resize: vertical;
+}
+
+.alert {
+  border-radius: 0.75rem;
+}
+
+button:focus-visible {
+  outline: 3px solid #6366f1;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767.98px) {
+  .app-shell {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  .app-shell > section > header {
+    padding: 1rem;
+  }
+
+  .chat-history {
+    height: 45vh;
+    min-height: 240px;
+    padding: 0.85rem;
+  }
+
+  .message-bubble {
+    max-width: 92%;
+  }
+}
